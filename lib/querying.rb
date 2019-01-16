@@ -25,7 +25,7 @@ end
 # def select_series_title_with_most_human_characters
 #   <<-SQL
 #     SELECT series.title /* you are selecting the title column of series */
-#     FROM series 
+#     FROM series
 
 #     JOIN books  /* need to join to books table */
 #     ON books.series_id = series.id  /* here is where to execute the join */
@@ -33,9 +33,9 @@ end
 #     ON character_books.book_id = books.id /* where to join it */
 #     JOIN characters /* last join on characters */
 
-#     ON character_books.character_id = characters.id 
+#     ON character_books.character_id = characters.id
 #     WHERE characters.species = 'human' /* where species is human */
-#     GROUP BY series.title 
+#     GROUP BY series.title
 
 #     ORDER BY COUNT(*) DESC /* here is where we can guarantee that the top one is the one with most human characters
 #     LIMIT 1 /* will grab just the top one, the most because we sorted descending */
